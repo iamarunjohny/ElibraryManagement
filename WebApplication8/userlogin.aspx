@@ -39,7 +39,7 @@
                         </div>
                          <br />
                         <div class="form-group">
-                           <asp:Button class="btn btn-success w-100 btn-lg" ID="Button3" runat="server" Text="Login" />
+                           <asp:Button class="btn btn-success w-100 btn-lg" ID="Button3" runat="server" Text="Login" OnClick="Button3_Click" />
                         </div>
                         <div class="form-group">
                            <a href="usersignup.aspx"><input class="btn btn-info w-100 btn-lg" id="Button2" type="button" value="Sign Up" /></a>
