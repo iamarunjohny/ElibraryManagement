@@ -73,6 +73,7 @@
     <Content Include="adminlogin.aspx" />
     <Content Include="adminmembermanagement.aspx" />
     <Content Include="adminpublishermanagement.aspx" />
+    <Content Include="book_inventory\books1.png" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.7.1.slim.min.js" />
