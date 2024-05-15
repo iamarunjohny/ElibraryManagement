@@ -61,10 +61,43 @@ namespace WebApplication8
         //go button click
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            getAuthorByID();
         }
 
         //user defined function
+
+        void getAuthorByID()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * from author_master_tbl where author_id='" + TextBox1.Text.Trim() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    TextBox2.Text = dt.Rows[0][1].ToString();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid Author ID');</script>");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
+        }
 
         void deleteAuthor()
         {
