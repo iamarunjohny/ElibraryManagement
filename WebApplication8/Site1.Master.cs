@@ -45,6 +45,8 @@ namespace WebApplication8
                     LinkButton12.Visible = false; // publisher management link button
                     LinkButton8.Visible = false; // book inventory link button
                     LinkButton9.Visible = false; // book issuing link button
+                    LinkButton10.Visible = false; // member management link button
+
                 }
                 else if (Session["role"].Equals("admin"))
                 {
@@ -61,6 +63,7 @@ namespace WebApplication8
                     LinkButton12.Visible = true; // publisher management link button
                     LinkButton8.Visible = true; // book inventory link button
                     LinkButton9.Visible = true; // book issuing link button
+                    LinkButton10.Visible = true; // member management link button
                 }
             }
             catch (Exception ex)
