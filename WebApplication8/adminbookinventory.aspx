@@ -59,16 +59,17 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-md-3">
+                     <div class="col-md-4">
                         <label>Book ID</label>
                         <div class="form-group">
                            <div class="input-group">
-                              <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Member ID"></asp:TextBox>
-                              <asp:LinkButton class="btn btn-primary" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click"><i class="fas fa-check-circle"></i></asp:LinkButton>
+                              <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Book ID"></asp:TextBox>
+                               
+                               <asp:Button ID="Button4" class="btn  btn-primary" runat="server" Text="Go" OnClick="Button4_Click" />
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-9">
+                     <div class="col-md-8">
                         <label>Book Name</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Book Name"></asp:TextBox>
