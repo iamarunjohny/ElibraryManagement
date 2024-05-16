@@ -1,5 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="WebApplication8.userprofile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -134,7 +141,7 @@
                      <div class="col-md-4">
                         <label>Old Password</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="Old Password" TextMode="Password" ReadOnly="true"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="Old Password"  ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
@@ -149,7 +156,7 @@
                      <div class="">
                         <center>
                            <div class="form-group d-grid col-6 mx-auto">
-                              <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Update" />
+                              <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Update" OnClick="Button1_Click" />
                            </div>
                         </center>
                      </div>
@@ -186,7 +193,7 @@
                   </div>
                   <div class="row">
                      <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" OnDataBound="GridView1_DataBound" OnRowDataBound="GridView1_RowDataBound"></asp:GridView>
                      </div>
                   </div>
                </div>
